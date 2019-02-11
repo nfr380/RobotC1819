@@ -12,7 +12,7 @@
 
 
   Task Description:
-
+  Start both motors at half speed, then rotate them the other way at half speed.
 
   Pseudocode:
   Start both motors at half speed clockwise
