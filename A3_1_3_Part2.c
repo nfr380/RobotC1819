@@ -12,7 +12,7 @@
 #pragma config(Motor,  port3,           leftMotor,     tmotorVex393_MC29, openLoop)
 #pragma config(Motor,  port9,           servoMotor,    tmotorServoStandard, openLoop)
 /*
-  Project Title: Output Output Output
+  Project Title: Bump Switch Motors
   Team Members: Raymond Metzger, Ryan Potter, Robbie Vannucchi, Nick Franzwa
   Date: 2/1/19
   Section: A3_1_3 Part 2
@@ -22,15 +22,20 @@
 
 
   Pseudocode:
+  when bump switch is pressed:
+  start right motor at half speed
+  start left motor at half speed
+  wait 5 seconds
+  stop motors
 */
 
 task main()
 {                                     //Program begins, insert code within curly braces
 
-  untilBump(bumpSwitch);
-	startMotor(rightMotor, 63);
-	startMotor(leftMotor, 63);
-	wait(5);
-	stopMotor(rightMotor);
+  untilBump(bumpSwitch); // when bump switch is pressed;
+	startMotor(rightMotor, 63); // start right motor at half speed
+	startMotor(leftMotor, 63); // start left motor at half speed
+	wait(5); // wait 5 seconds
+	stopMotor(rightMotor); // stop right motor
 
 }
