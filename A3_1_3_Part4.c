@@ -14,28 +14,31 @@
 Project Title: Using Optical Shaft Encoder
 Team Members: Raymond Metzger, Ryan Potter, Robbie Vannucchi, Nick Franzwa
 Date: 2/1/19
-Section: A3_1_3 Part 1
+Section: A3_1_3 Part 4
 
 
 Task Description: Using Optical Shaft Encoder
 
 
 Pseudocode:
-
+start both motors at half speed
+stop motors when encoder counts 480
+start motors at half speed counter clockwise
+stop both motors when encoder counts 1260
 */
 
 task main()
 {                                     //Program begins, insert code within curly braces
 
-	startMotor(leftMotor, 63);
-	startMotor(rightMotor, 63);
-	untilEncoderCounts(480,quad);
-	stopMotor(leftMotor);
-	stopMotor(rightMotor);
-	startMotor(leftMotor, -63);
-	startMotor(rightMotor, -63);
-	untilEncoderCounts(1260,quad);
-	stopMotor(leftMotor);
-	stopMotor(rightMotor);
+	startMotor(leftMotor, 63); // start left motor at half speed
+	startMotor(rightMotor, 63); // start right motor at half speed
+	untilEncoderCounts(480,quad); // when encoder counts 480;
+	stopMotor(leftMotor); // stop left motor
+	stopMotor(rightMotor); // stop right motor
+	startMotor(leftMotor, -63); // start left motor at half speed counter clockwise
+	startMotor(rightMotor, -63); // start right motor at half speed counter clockwise
+	untilEncoderCounts(1260,quad); // when encoder counts 1260;
+	stopMotor(leftMotor); // stop left motor
+	stopMotor(rightMotor); // stop right motor
 
 }
