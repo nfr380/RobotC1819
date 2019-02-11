@@ -11,21 +11,21 @@
   Task Description:
 
 
-  Pseudocode:
+  Pseudocode: The red led will turn off, wait one second, turn on, wait one second, turn off, wait one second, turn on, wait one second, and turn off.
 
 */
 
 task main()
 {                                     //Program begins, insert code within curly braces
-	turnLEDOff(red);
-	wait(1);
-	turnLEDOn(red);
-	wait(1);
-	turnLEDOff(red);
-	wait(1);
-	turnLEDOn(red);
-	wait(1);
-	turnLEDOff(red);
+	turnLEDOff(red); //Turn off led 
+	wait(1);         //Wait 1 sec 
+	turnLEDOn(red);  //Turn on led
+	wait(1);         //Wait 1 sec 
+	turnLEDOff(red); //Turn off led 
+	wait(1);         //Wait 1 sec 
+	turnLEDOn(red);  //Turn on led
+	wait(1);         //Wait 1 sec
+	turnLEDOff(red); //Turn off led 
 
 
 
