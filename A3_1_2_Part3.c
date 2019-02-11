@@ -20,22 +20,22 @@
 task main()
 {                                     //Program begins, insert code within curly braces
 
-motor[port2] = 63.5;
-wait1Msec(5000);
-stopMotor(port2);
+motor[port2] = 63.5; //Right motor -cw- at half speed
+wait1Msec(5000);     //Wait 5 seconds
+stopMotor(port2);    //stop right motor
 //rotates the right motor in a positive direction at half speed for 5 seconds
 
-motor[port3] = -127/4;
-wait1Msec(2500);
-stopMotor(port3);
-wait1Msec(2000);
+motor[port3] = -127/4; //Left motor -ccw- at 1/4 speed
+wait1Msec(2500);       //Wait 2.5 seconds
+stopMotor(port3);      //Stop right motor 
+wait1Msec(2000);       //Wait 2 seconds
 //rotates the left motor in a negative driection at quarter speed for 2.5 seconds
 
-motor[port2] = 127;
-motor[port3] = 127;
-wait1Msec(7250);
-stopMotor(port2);
-stopMotor(port3);
+motor[port2] = 127;   //Right motor full speed
+motor[port3] = 127;   //Left motor full speed
+wait1Msec(7250);      //Wait 7.25 seconds
+stopMotor(port2);     //Stop right motor
+stopMotor(port3);     //Stop left motor
 //rotates both motors at full speed for 7.25 seconds
 
 }
